@@ -1,8 +1,8 @@
 {
-  "name": "test",
-  "displayName": "Test",
+  "name": "copy-site",
+  "displayName": "Copy Site",
   "version": "0.0.1",
-  "description": "test 谷歌插件",
+  "description": "谷歌插件 复制网站信息",
   "author": "zhangyang",
   "scripts": {
     "dev": "plasmo dev",
@@ -10,9 +10,13 @@
     "package": "plasmo package"
   },
   "dependencies": {
+    "@ant-design/icons": "^5.5.1",
+    "ahooks": "^3.8.1",
+    "antd": "^5.22.2",
     "plasmo": "0.89.4",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "react-use": "^17.5.1"
   },
   "devDependencies": {
     "@ianvs/prettier-plugin-sort-imports": "4.1.1",
@@ -20,12 +24,21 @@
     "@types/node": "20.11.5",
     "@types/react": "18.2.48",
     "@types/react-dom": "18.2.18",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.49",
     "prettier": "3.2.4",
+    "tailwindcss": "^3.4.15",
     "typescript": "5.3.3"
   },
   "manifest": {
+    "permissions": [
+      "tabs",
+      "activeTab",
+      "cookies",
+      "scripting"
+    ],
     "host_permissions": [
-      "https://*/*"
+      "https://*.myshoplaza.com/*"
     ]
   }
 }
