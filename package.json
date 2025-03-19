@@ -35,7 +35,10 @@
       "tabs",
       "activeTab",
       "cookies",
-      "scripting"
+      "scripting",
+      "webRequest",
+      "webRequestBlocking",
+      "<all_urls>"
     ],
     "host_permissions": [
       "https://*.myshoplaza.com/*"

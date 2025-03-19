@@ -1,6 +1,5 @@
-import { CopyOutlined } from "@ant-design/icons"
 import { useDebounceFn, useUpdateEffect } from "ahooks"
-import { message, Popover } from "antd"
+import { message } from "antd"
 import { useCopyToClipboard } from "react-use"
 
 const CopyBox = (props: { content: string }) => {
@@ -17,7 +16,7 @@ const CopyBox = (props: { content: string }) => {
   }, [state])
 
   const { run } = useDebounceFn(onCopy, {
-    wait: 200
+    wait: 50
   })
 
   function onCopy() {
@@ -25,11 +24,11 @@ const CopyBox = (props: { content: string }) => {
   }
 
   return (
-    <Popover content="复制">
-      <span className="cursor-pointer" onClick={run}>
-        <CopyOutlined style={{ fontSize: 16 }} />
-      </span>
-    </Popover>
+    <div
+      className="truncate cursor-pointer select-none border border-solid border-[#e5e5e5] rounded-md p-2 hover:bg-[#f2f2f2]"
+      onClick={run}>
+      {content}
+    </div>
   )
 }
 
